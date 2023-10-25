@@ -1,0 +1,172 @@
+@import '../../responsive'; 
+.navbar-container{
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    background-color: black;
+    z-index: 9999999;
+    border-bottom:  1px solid rgba(128, 128, 128, 0.103);
+    .navbar-wraper{
+        width: 1400px;
+        margin: 0 auto;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+    .navbar-left-logo{
+        h1{
+            font-weight: 600;
+            cursor: pointer;
+            color: #FFFFFF !important;
+        }
+    }
+    .navbar-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navbar-center-input{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input{
+                outline: none;
+                padding-left: 10px;
+                border: 0.5px solid rgba(128, 128, 128, 0.456);
+                border-radius: 5px;
+                background-color: white;
+                width: 300px;   
+                height: 35px;           
+                &::placeholder{
+                    font-size: 18px;
+                    @include mobile {
+                            font-size: 14px;
+                        }
+                }
+                 @include mobile {
+                   width: 110px;
+                }
+            }
+            .navbar-center-search-icon{
+                position: absolute;
+                right: 0;
+                color: gray;
+                cursor: pointer;
+            }
+        }
+    }
+    .navbar-right-cart-icon{
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+    .navbar-right{
+        .navbar-username{
+            font-weight: bold;
+            color: orangered;
+            img{
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:hover{
+                .navbar-user-login{
+                    display: flex;
+                }
+            }
+            .navbar-user-login{
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                width: 90px;
+                text-align: center;
+                height: auto;
+                z-index: 999999999;
+                background-color: black;
+                border-radius: 5px;
+                color: white;
+                display: none;
+                top: 30px;
+                span{
+                    margin: 5px 0;
+                }
+            }
+        }
+        @include mobile {
+                display: none;
+                .navbar-right-cart-icon{
+                    display: block;
+                }
+            }
+       
+        ul{
+            
+            display: flex;
+            align-items: center;
+            li{
+                margin-left: 40px;
+                list-style: none;
+                font-weight: 600;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+        .navbar-menu {
+            @include largePc{
+                display: none;
+            }
+            width: 40px;
+            height: 30px;
+            bottom: 50%;
+            z-index: 99999;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include mobile {
+                width: 20px;
+            }
+            div {
+                width: 40px;
+                height: 3px;
+                background-color: #333;
+                @include mobile {
+                    width: 20px;
+                }
+            }
+            &.navbar-menu-toggle{
+                justify-content: center;
+                div{
+                    transition: all 1s ease;
+                    &:first-child{
+                        transform: rotate(-45deg);
+                        position: relative;
+                        top: 0px;    
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    &:last-child{
+                        transform: rotate(45deg);
+                        position: relative;
+                        bottom: 3px;
+                    }
+                    
+                }
+            }
+        }
+    }

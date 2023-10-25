@@ -1,0 +1,120 @@
+@import '../../responsive';
+.feature-container{
+    width: 100%; 
+    height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1111111;
+            color: #fff;
+            cursor: pointer;
+            background-color: rgba(128, 128, 128, 0.401);
+    
+            &.feature-icon-left {
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    
+            &.feature-icon-right {
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    .feature-wraper{
+        width: auto;
+        transition: all 1s ease;
+        height:100%;
+        display: flex;
+        .feature-item{
+            width: 100vw;
+            height: 100%;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+            .feature-item-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 30%;
+                position: absolute;
+                right: 120px;
+                top: 25%;
+                transform: translateY(-50%);
+                h1{
+                    color: black;
+                    font-size: 50px;
+                    font-weight: bold;
+                    animation: k1 3s linear infinite ;
+                    @include mobile {
+                            font-size: 25px;
+                        }
+                }
+                span{
+                    color: black;
+                    top: 20px;
+                    font-size: 25px;
+                    animation: k1 3s linear infinite;
+                    animation-delay:  1s;
+                    @include mobile {
+                            font-size: 15px;
+                        }
+                }
+                button{
+                    width: 50%;
+                    margin-top: 20px;
+                    height: 55px;
+                    font-size: 25px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    font-weight: bold;
+                    background-color: #333;
+                    color: white;
+                    border: 1px solid rgba(128, 128, 128, 0.238);
+                    border-radius: 5px;
+                    box-shadow: 5px 5px 30px red;
+                    transition: all 0.3s linear;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                    @include mobile {
+                            font-size: 18px;
+                            width: 100%;
+                        }
+                }
+            }
+        }
+    }
+}
+
+@keyframes k1 {
+    0%{
+        transform: translateX(700px);
+    }
+    25% { 
+        transform: translateX(0)
+    }
+    50% { 
+        transform: translateX(0)
+    }
+    75% { 
+        transform: translateX(0)
+    }
+    100% { 
+        transform: translateX(0);
+    }
+}
