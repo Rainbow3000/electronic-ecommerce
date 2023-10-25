@@ -1,0 +1,93 @@
+@import '../../responsive'; 
+.register-container{
+    width: 100%;
+    height: 100vh;
+    height: auto;
+    margin-top: 90px;
+    padding: 60px 0;
+    background:linear-gradient(rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)), url("") center;
+    background-size: cover;
+    .register-wraper{
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+        @include mobile{
+            width: 100%;
+            padding: 0 10px;
+        }
+        h1{
+            font-size: 20px;
+            font-weight: 400;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+        }
+        form{
+            width: 500px;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: -2px 2px 17px 3px rgba(48,97,125,0.75);
+            -webkit-box-shadow: -2px 2px 17px 3px rgba(48,97,125,0.75);
+            -moz-box-shadow: -2px 2px 17px 3px rgba(48,97,125,0.75);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            border: 1px solid rgba(128, 128, 128, 0.212);
+            border-radius: 4px;
+            label {
+                font-size: 14px;
+                font-weight: 400;
+                span{
+                    color: red;
+                }
+            }
+            div{
+                display: flex;
+                padding: 0 10px;
+                flex-direction: column;
+                margin-top: 20px;
+                .register-error{
+                    font-size: 14px;
+                    color: red;
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    outline: none;
+                    border: 1px solid rgb(194, 180, 180);
+                    padding-left: 20px;
+                    border-radius: 4px;
+                }
+            }
+            a{
+                text-align: center;
+                text-decoration: underline;
+            }
+            button{
+                height: 45px;
+                margin-top: 20px;
+                font-size: 16px;
+                background-color: rgba(128, 128, 128, 0.788);
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                border: 1px solid rgba(128, 128, 128, 0.336);
+                &:hover{
+                    background-color: gray;
+                }
+                @include mobile {
+                        width: 80%;
+                        height: 35px;
+                        font-size: 20px;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                        background-color: gray;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                }
+            }
+        }
+    }
+}
