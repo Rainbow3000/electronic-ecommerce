@@ -1,0 +1,37 @@
+.order-details-container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    button{
+        width: 250px;
+        height: 35px;
+        font-size: 18px;
+        color: gray;
+        border: none;
+        box-shadow: 5px 5px 30px blue;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.order-details-table{
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    margin:  0 auto;
+    padding-top: 20px;
+}
+
+th{
+    width: 20%;
+}
+
+tr{
+    margin-top: 10px;
+    border: 1px solid gray;
+}
